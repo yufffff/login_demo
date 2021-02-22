@@ -13,7 +13,7 @@ const routes = [
     redirect: 'signin',
   },
   {
-    path: '/login_demo',
+    path: '/',
     name: 'Home',
     component: Home,
     meta: { requiresAuth: true }

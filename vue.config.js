@@ -4,7 +4,7 @@ module.exports = {
   ],
   outputDir: 'docs',
   assetsDir: './',
-  publicPath: '/',
+  publicPath: '/login_demo',
   filenameHashing: false,
   productionSourceMap: false
 }
