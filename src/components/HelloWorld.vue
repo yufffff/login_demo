@@ -26,14 +26,23 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <button @click="signOut">Sign out</button>
   </div>
 </template>
 
 <script>
+import firebase from 'firebase'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  methods: {
+    signOut: function () {
+      firebase.auth().signOut().then(() => {
+        this.$router.push('/signin')
+      })
+    }
   }
 }
 </script>
